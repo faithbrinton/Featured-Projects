@@ -1,0 +1,164 @@
+/*
+Program: Assignment 05: Metric to Imperial Converter
+Programmer: Faith Cameron
+LMD: 2026-02-04
+*/
+
+/* ----------------------------------------
+Layout
+------------------------------------------ */
+
+/* Page-wrapper protects and aligns the center card and adjusts based upon screen width */
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* ----------------------------------------
+Card styling
+------------------------------------------ */
+
+/* The main container the content is in */
+.card {
+  background: white;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* -----------------------------------------
+Typography
+------------------------------------------ */
+
+/* "Metric to Imperical Converter" Title*/
+.card h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* ------------------------------------------------
+Form controls (input/select/button)
+------------------------------------------------- */
+
+/* Styles all input, select, and button elements the same way for consistency */
+input,
+select,
+button {
+  border: 1px solid;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  font-size: 16px;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* This field was showing as longer than the other 2, so this was a targeted override to even it out */
+#value {
+  width: 95%;
+}
+
+/* Cursor changes to pointer when over button to give a clickable feeling to the user */
+button {
+  cursor: pointer;
+  background-color: rgb(241, 244, 252);
+  border: 1px solid rgb(0, 0, 0);
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background-color: rgb(217, 219, 236);
+}
+
+/* Centers, formats and gives breathing room to conversion result */
+#result {
+  margin-top: 40px;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* Background animation adapted from example found at: https://prismic.io/blog/css-background-effects */
+body {
+  margin: auto;
+  font-family: "Quicksand", sans-serif;
+  overflow: auto;
+
+  background: linear-gradient(
+    315deg,
+    rgb(93, 79, 160) 3%,
+    rgb(120, 111, 191) 38%,
+    rgb(155, 160, 220) 68%,
+    rgb(210, 215, 245) 98%
+  );
+
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.wave {
+  background: rgb(255 255 255 / 25%);
+  border-radius: 1000% 1000% 0 0;
+  position: fixed;
+
+  width: 200%;
+  height: 12em;
+
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  2% {
+    transform: translateX(1);
+  }
+  25% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(1);
+  }
+}
