@@ -44,4 +44,4 @@ Each project highlights problem-solving ability, clean implementation, and progr
 I am an IT Programming student with a background in graphic design, combining logical system building with thoughtful interface design.
 
 More projects and detailed case studies are available on my portfolio:
-[View Portfolio](https://github.com/faithbrinton/Portfolio)
+[View Portfolio](https://faithbrinton.github.io/Portfolio/)
