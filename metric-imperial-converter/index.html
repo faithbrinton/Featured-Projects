@@ -1,0 +1,64 @@
+<!--
+Program: Assignment 05: Metric to Imperial Converter
+Programmer: Faith Cameron
+LMD: 2026-02-04
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Link to  CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Google Font (Quicksand) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Browser tab title -->
+    <title>Metric to Imperial Converter</title>
+  </head>
+
+  <body>
+    <!-- Background animation adapted from example found at: https://prismic.io/blog/css-background-effects -->
+    <div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+
+    <!-- Page-wrapper centers the card provides padding -->
+    <div class="page-wrapper">
+      <!-- Card holds and styles the your converter UI -->
+      <div class="card">
+        <h1>Metric to Imperial Converter</h1>
+
+        <!-- Value input field -->
+        <input id="value" type="number" placeholder="Enter a value" />
+
+        <!-- Dropdown option menu for choosing conversion -->
+        <select id="type">
+          <option value="">Select conversion</option>
+          <option value="cToF">Celsius → Fahrenheit</option>
+          <option value="kmToMi">Kilometers → Miles</option>
+          <option value="kgToLb">Kilograms → Pounds</option>
+          <option value="cmToIn">Centimeters → Inches</option>
+        </select>
+
+        <!-- Convert button -->
+        <button id="convert">Convert</button>
+
+        <!-- Result section for output -->
+        <p id="result">Result will appear here</p>
+      </div>
+    </div>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
